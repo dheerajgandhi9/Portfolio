@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+}
 .socialmedia {
   overflow: hidden;
 }
@@ -44,7 +47,11 @@ img {
   z-index: -1;
 }
 .blankspace {
-  height: 100vh;
+  height: 93vh;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 .intro {
   color: white;
@@ -198,7 +205,125 @@ hr {
   display: inline-block;
 }
 .aboutus {
-  position: relative;
   height: 100vh;
   width: 100vw;
+  display: table;
+  background-color: #11121d;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+}
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 100vw;
+}
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+.line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #d15400 75%,
+    #d15400 100%
+  );
+  animation: drop 5s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+.line:nth-child(1) {
+  margin-left: -25%;
+}
+.line:nth-child(1)::after {
+  animation-delay: 2s;
+}
+.line:nth-child(3) {
+  margin-left: 25%;
+}
+.line:nth-child(3)::after {
+  animation-delay: 2s;
+}
+
+@keyframes drop {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+.lines1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 100vw;
+}
+.line1 {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 50%;
+  left: 0%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+.line1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 15vh;
+  top: -50%;
+  left: 0%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    #d15400 75%,
+    #d15400 100%
+  );
+  animation: drop1 5s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+.line1:nth-child(1) {
+  margin-top: 24%;
+}
+.line1:nth-child(1)::after {
+  animation-delay: 1s;
+}
+.line1:nth-child(3) {
+  margin-top: -25%;
+}
+.line1:nth-child(3)::after {
+  animation-delay: 1.5s;
+}
+
+@keyframes drop1 {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 110%;
+  }
 }
