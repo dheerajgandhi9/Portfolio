@@ -38,16 +38,16 @@ nav ul li:hover {
   opacity: 90%;
   text-shadow: 0 0 2px white;
 }
-img {
+.frontpg img {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   z-index: -1;
 }
 .blankspace {
-  height: 93vh;
+  height: 90vh;
   width: 100vw;
   position: relative;
   top: 0;
@@ -64,13 +64,14 @@ img {
 }
 .intro h1 {
   font-weight: 300;
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 2.1vw, 2rem);
 }
 .intro h2 {
   font-family: "Modern Antiqua", cursive;
   letter-spacing: 8px;
   margin-top: 6px;
-  font-size: 1.9rem;
+  white-space: nowrap;
+  font-size: clamp(1.4rem, 2.7vw, 4rem);
 }
 #Fd {
   color: rgba(255, 132, 44, 1);
@@ -79,23 +80,25 @@ img {
   color: white;
 }
 .intro h3 {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.5vw, 4rem);
   margin-top: 10px;
   font-weight: 400;
   letter-spacing: 5px;
 }
 #Download {
   color: white;
+  font-size: clamp(0.9rem, 1.3vw, 2rem);
 }
 #cv {
   color: rgba(255, 132, 44, 1);
+  font-size: clamp(0.9rem, 1.3vw, 2rem);
 }
 .intro h4 {
   margin-top: 25px;
   font-weight: 300;
   letter-spacing: 3px;
 }
-hr {
+.intro hr {
   position: relative;
   width: 100px;
   left: 50%;
@@ -114,7 +117,7 @@ hr {
   margin-right: 2%;
 }
 .icontxt {
-  font-size: 0.7rem;
+  font-size: clamp(0.5rem, 0.8vw, 3rem);
 }
 .sm {
   float: right;
@@ -124,18 +127,26 @@ hr {
 .socialmedia #github {
   position: relative;
   top: 10px;
+  height: clamp(20px, 2vw, 30px);
+  width: clamp(20px, 3vw, 30px);
 }
 .socialmedia #insta {
   position: relative;
   top: 14px;
+  height: clamp(20px, 2vw, 30px);
+  width: clamp(20px, 3vw, 30px);
 }
 .socialmedia #mail {
   position: relative;
   top: 14px;
+  height: clamp(20px, 2vw, 30px);
+  width: clamp(20px, 3vw, 30px);
 }
 .socialmedia #linkedin {
   position: relative;
   top: 12px;
+  height: clamp(20px, 2vw, 30px);
+  width: clamp(20px, 3vw, 30px);
 }
 .socialmedia a {
   color: rgba(255, 132, 44, 1);
@@ -149,7 +160,7 @@ hr {
   position: absolute;
   bottom: 0;
   left: 50%;
-  font-size: 0.7rem;
+  font-size: clamp(0.5rem, 0.8vw, 1rem);
   font-family: "poppins";
   transform: translate(-50%, -50%);
   color: white;
@@ -173,6 +184,7 @@ hr {
 }
 .scrolldown svg {
   animation: to-fro 0.4s ease-in-out infinite alternate;
+  height: clamp(10px, 1vw, 15px);
 }
 @keyframes to-fro {
   from {
@@ -204,7 +216,8 @@ hr {
   transform: translateY(100%);
   display: inline-block;
 }
-.aboutus {
+.background {
+  z-index: -3;
   height: 100vh;
   width: 100vw;
   display: table;
@@ -326,4 +339,61 @@ hr {
   100% {
     left: 110%;
   }
+}
+.sitestart {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.aboutus {
+  margin-top: 10%;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 4em;
+  margin-right: 10%;
+}
+/* .image1 {
+  z-index: 2;
+  position: relative;
+}
+.blob {
+  position: relative;
+
+  height: clamp(50px, 20vw, 350px);
+}
+.blob path {
+  animation: blob 3s linear infinite alternate;
+}
+.man {
+  position: absolute;
+  left: 30%;
+  top: 10%;
+
+  height: clamp(50px, 30vw, 300px);
+}
+@keyframes blob {
+  0% {
+    d: path(
+      "M212.372, 0.00609935C222.251 ,0.189999 229.45 4.24454 234.369 7.01179C270.546 27.3633 251.444 80.5948 285.5 105.5C291.73 110.054 316.061 115.6 350.5 115.6C379.768 123.902 386.405 126.678 394.354 140.12C396.534 143.815 398.403 149.061 397.353 161.137C393.964 201.131 367.956 207.418 368.906 231.045C370.146 261.406 413.952 271.328 409.522 304.193C408.69 309.932 406.595 315.476 403.353 320.516C385.285 348.644 347.068 334.834 316.061 356.92C278.125 383.953 288.756 425.218 247.5 440C206.914 439.396 193.263 396.703 146.068 379.058C104.822 363.636 65.8259 389.26 43.3881 366.053C38.6986 361.193 36.9787 356.508 34.9889 350.886C18.9205 305.489 68.5856 280.978 59.9865 241.326C51.4973 202.006 -5.39712 188.941 1.39221 154.131C2.23196 149.821 3.92383 145.672 6.39172 141.871C22.0602 118.227 75.2136 115.536 107 105.5C178.094 83.073 164.136 -0.869612 212.372 0.00609935Z"
+    );
+  }
+  100% {
+    d: path(
+      "M211.83 1.00003C221.709 1.18393 227.83 9.30436 231.83 14C254.83 41 233.774 50.5948 267.83 75.5001C274.06 80.0538 305.891 95.5 340.33 95.5C369.597 103.802 381.381 106.558 389.33 120C391.51 123.696 393.88 126.924 392.83 139C389.441 178.994 348.55 178.873 349.5 202.5C350.74 232.861 413.782 241.328 409.353 274.193C408.52 279.932 406.425 285.476 403.183 290.516C385.115 318.644 313.007 289.915 282 312C244.063 339.033 288.587 395.218 247.331 410C206.745 409.396 193.094 366.703 145.898 349.058C104.652 333.636 57.2571 389.206 34.8193 366C30.1297 361.14 26.4896 354.68 24.4998 349.058C8.43134 303.661 68.416 250.978 59.8168 211.326C52.1034 167.688 -3.05588 144.961 1.22255 124.131C1.05119 120.731 2.54347 116.763 6.22206 111.871C21.8905 88.2272 63.2131 105.536 95 95.5C166.093 73.073 163.595 0.124324 211.83 1.00003Z"
+    );
+  }
+} */
+.content1 {
+  margin-left: 4%;
+}
+.content1 h1 {
+  font-size: clamp(20px, 3vw, 60px);
+  color: white;
+  font-family: "poppins";
+}
+.content1 p {
+  font-size: clamp(10px, 1.5vw, 70px);
+  color: white;
+  font-family: "montserrat";
 }

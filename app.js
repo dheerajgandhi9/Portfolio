@@ -7,8 +7,8 @@ tl.fromTo(".intro", { opacity: 0 }, { opacity: 1, duration: 0.5 }, "-=1.4");
 tl.fromTo(".scrolldown", { opacity: 0 }, { opacity: 1, duration: 0.5 }, "-=1");
 tl.fromTo(
   ".intro hr",
-  { width: "20px" },
-  { width: "100px", duration: 1 },
+  { width: "1vw" },
+  { width: "clamp(4.5rem, 8vw, 100px)", duration: 1 },
   "-=1.4"
 );
 tl.to(".sm", { x: "0%", duration: 0.8, stagger: 0.2 }, "-=1.2");
