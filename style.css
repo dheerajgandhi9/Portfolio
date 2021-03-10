@@ -4,9 +4,12 @@
 	box-sizing: border-box;
 	font-family: "poppins";
 }
+body {
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
 html {
 	scroll-behavior: smooth;
-	overflow-x: hidden;
 }
 ::-webkit-scrollbar {
 	width: 10px;
@@ -30,11 +33,17 @@ html {
 a {
 	text-decoration: none;
 }
-body {
-	overflow-x: hidden;
-}
+
 .socialmedia {
 	overflow: hidden;
+}
+#toppg h1 {
+	font-family: "Herr Von Muellerhoff", cursive;
+	font-weight: lighter;
+	margin-left: 1rem;
+	font-size: 2rem;
+	margin-top: 0.3rem;
+	color: rgba(255, 255, 255, 0.808);
 }
 nav {
 	position: relative;
@@ -190,7 +199,7 @@ nav ul li:hover {
 }
 
 .socialmedia {
-	top: 60vh;
+	top: 65vh;
 	z-index: 3;
 	float: right;
 	position: relative;
@@ -206,15 +215,10 @@ nav ul li:hover {
 	margin-bottom: 2%;
 	transform: translateX(130%);
 }
-.socialmedia #github {
-	position: relative;
-	top: 10px;
-	height: clamp(20px, 2vw, 30px);
-	width: clamp(20px, 3vw, 30px);
-}
+
 .socialmedia #insta {
 	position: relative;
-	top: 14px;
+	top: 10px;
 	height: clamp(20px, 2vw, 30px);
 	width: clamp(20px, 3vw, 30px);
 }
@@ -265,6 +269,7 @@ nav ul li:hover {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	z-index: 200;
 }
 .scrolldown svg {
 	animation: to-fro 0.4s ease-in-out infinite alternate;
@@ -283,6 +288,7 @@ nav ul li:hover {
 	font-family: "poppins";
 	font-size: 1.5rem;
 }
+
 .slider {
 	position: fixed;
 	background: rgb(3, 1, 20);
@@ -290,6 +296,7 @@ nav ul li:hover {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
+	z-index: 100;
 	transform: translateY(100%);
 }
 .hide {
@@ -904,6 +911,10 @@ footer h1 {
 	}
 }
 @media screen and (max-width: 720px) {
+	html {
+		overflow-x: hidden;
+	}
+
 	nav ul {
 		position: fixed;
 		right: 0;
@@ -1101,6 +1112,9 @@ footer h1 {
 	}
 }
 @media screen and (max-width: 580px) {
+	body {
+		overflow-y: hidden;
+	}
 	.image1 {
 		height: 60%;
 		width: 60%;
@@ -1153,11 +1167,14 @@ footer h1 {
 	.projectimg1 img {
 		width: 100%;
 		height: 100%;
+		object-fit: cover;
 		margin-left: 2rem;
 	}
 	.projectimg1 {
-		width: 250px;
-		height: 250px;
+		margin-left: 3rem;
+		margin-top: 1.5rem;
+		width: 130px;
+		height: 130px;
 	}
 	.proj1 {
 		margin: 0 5% 10% 5%;
@@ -1165,12 +1182,13 @@ footer h1 {
 	.projectimg2 img {
 		width: 100%;
 		height: 100%;
-		margin-left: 3rem;
+		position: relative;
+		top: 1.5rem;
+		margin-left: 5rem;
 	}
 	.projectimg2 {
-		width: 200px;
-		height: 200px;
-
+		width: 150px;
+		height: 150px;
 		margin-bottom: 5%;
 	}
 	.proj2 {
@@ -1188,7 +1206,7 @@ footer h1 {
 		font-size: 0.6rem;
 	}
 
-	input[type="submit"] {
+	#sendbutton {
 		font-size: 0.6rem;
 	}
 	.arrow-icon {
@@ -1197,5 +1215,16 @@ footer h1 {
 	footer h1 {
 		font-size: 0.5rem;
 		letter-spacing: 1px;
+	}
+	.landing-text {
+		text-align: center;
+		font-size: 1rem;
+	}
+	#toppg h1 {
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin-top: 0.5rem;
+		letter-spacing: 3px;
+		color: white;
 	}
 }
