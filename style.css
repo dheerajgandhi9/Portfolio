@@ -190,6 +190,7 @@ nav ul li:hover {
 
 .socialmedia {
 	top: 60vh;
+	z-index: 3;
 	float: right;
 	position: relative;
 	font-family: "poppins";
@@ -629,7 +630,6 @@ nav ul li:hover {
 .projectimg1 img {
 	height: 80%;
 	width: 80%;
-  
 }
 .discription1 h4 {
 	font-weight: 300;
@@ -711,10 +711,10 @@ textarea {
 	padding: 1%;
 }
 textarea,
-input[type="submit"] {
+#sendbutton {
 	border: #d15400 solid 1px;
 }
-input[type="submit"] {
+#sendbutton {
 	border: #d15400 solid 1px;
 	background: rgba(0, 0, 0, 0);
 	color: rgba(193, 193, 193, 1);
@@ -724,7 +724,7 @@ input[type="submit"] {
 	font-size: 1rem;
 	outline: none;
 }
-input[type="submit"]:active {
+#sendbutton:active {
 	box-shadow: 0 0 7px 1px #d15400;
 	border: #d15400 solid 1px;
 }
@@ -774,6 +774,7 @@ footer {
 }
 footer h1 {
 	font-weight: 300;
+	font-size: 1rem;
 }
 .arrow2 {
 	position: absolute;
@@ -906,7 +907,6 @@ footer h1 {
 		position: fixed;
 		right: 0;
 		top: 0;
-
 		display: flex;
 		flex-direction: column;
 		width: 70%;
@@ -917,14 +917,14 @@ footer h1 {
 		z-index: 3;
 		transform: translateX(100%);
 		transition: transform 0.4s ease-out;
+		overflow-x: hidden;
 	}
 	nav {
 		background: none;
-		overflow: hidden;
 	}
 	.hamburger {
 		display: block;
-		z-index: 10;
+		z-index: 3;
 	}
 	nav ul li {
 		transition: none;
@@ -1005,7 +1005,7 @@ footer h1 {
 	}
 }
 @media screen and (max-width: 580px) {
-	.separator{
+	.separator {
 		font-size: 1.3rem;
 	}
 	.image1 {
@@ -1028,7 +1028,7 @@ footer h1 {
 
 		margin-bottom: 3%;
 		letter-spacing: 1px;
-		font-size: .9rem;
+		font-size: 0.9rem;
 		font-weight: 500;
 		display: flex;
 		font-family: "poppins";
@@ -1039,10 +1039,10 @@ footer h1 {
 	.content1 .saying0 {
 		display: none;
 	}
-	.skills{
-		margin-top:0;
+	.skills {
+		margin-top: 0;
 	}
-	.skills-grid{
+	.skills-grid {
 		margin-top: 0;
 	}
 	.skills-grid .outercircle {
@@ -1061,35 +1061,34 @@ footer h1 {
 	}
 	.projectimg1 img {
 		width: 70%;
-		height:60%;
+		height: 60%;
 	}
-	.project h3
-	{
-		font-size:.9rem;
+	.project h3 {
+		font-size: 0.9rem;
 	}
-	.discription1 h4{
-		font-size: .6rem;
+	.discription1 h4 {
+		font-size: 0.6rem;
 		line-height: 1rem;
 		margin-top: 9%;
 	}
-	.projlinks h5 a{
-		font-size: .7rem;
+	.projlinks h5 a {
+		font-size: 0.7rem;
 	}
-	.arrowicon{
+	.arrowicon {
 		height: 80%;
 		width: 80%;
 	}
 	.projectimg2 img {
 		width: 70%;
-		height:60%;
+		height: 60%;
 	}
-	.contact{
+	.contact {
 		top: -10vh;
 	}
-	.contact-main{
+	.contact-main {
 		height: 100%;
 	}
-	.contact-main-grid{
+	.contact-main-grid {
 		margin-bottom: 0;
 	}
 }
@@ -1099,17 +1098,17 @@ footer h1 {
 		width: 60%;
 		align-self: center;
 	}
-	.saying{
-		font-size: .6rem;
+	.saying {
+		font-size: 0.6rem;
 	}
-	.aboutus-grid{
-	   grid-auto-rows: 60%;
+	.aboutus-grid {
+		grid-auto-rows: 60%;
 	}
-	.aboutus .content1 p{
-		font-size: .55rem;
+	.aboutus .content1 p {
+		font-size: 0.55rem;
 		line-height: 1rem;
 	}
-	.skills{
+	.skills {
 		margin-top: 30%;
 	}
 	.skills-grid .outercircle {
@@ -1126,57 +1125,54 @@ footer h1 {
 	.skills h1 {
 		font-size: 0.45rem;
 	}
-	.project h3
-	{
-		font-size:.7rem;
+	.project h3 {
+		font-size: 0.7rem;
 		font-weight: 400;
 		border-bottom: solid rgb(255, 107, 0) 3px;
 	}
-	.discription1 h4{
-		font-size: .5rem;
-		line-height: .8rem;
-       letter-spacing: .5px;
-	
+	.discription1 h4 {
+		font-size: 0.5rem;
+		line-height: 0.8rem;
+		letter-spacing: 0.5px;
 	}
-	.projlinks h5 a{
-		font-size: .5rem;
+	.projlinks h5 a {
+		font-size: 0.5rem;
 	}
-	.arrowicon{
+	.arrowicon {
 		height: 70%;
 		width: 70%;
 	}
 	.projectimg1 img {
-		width: 50%;
-		height:50%;
+		width: 100%;
+		height: 100%;
+		margin-left: 2rem;
 	}
 	.projectimg1 {
-		width: 100%;
-		height:100%;
-
+		width: 80%;
+		height: 80%;
 	}
-	.proj1{
-		margin:0 5% 10% 5%;
+	.proj1 {
+		margin: 0 5% 10% 5%;
 	}
 	.projectimg2 img {
-		width: 50%;
-		height:50%;
+		width: 100%;
+		height: 100%;
+		margin-left: 3rem;
 	}
 	.projectimg2 {
-		width: 100%;
-		height:100%;
-		margin-bottom: 5%;
+		width: 70%;
+		height: 70%;
 
+		margin-bottom: 5%;
 	}
-	.proj2{
-		margin:0 5% 0% 5%;
+	.proj2 {
+		margin: 0 5% 0% 5%;
 	}
-	.separator{
-		font-size:.9rem;
+	.separator {
+		font-size: 0.9rem;
 	}
 	.projname::before {
-		
 		border-top: solid rgb(255, 107, 0) 2px;
-		
 	}
 	input[type="text"],
 	input[type="email"],
@@ -1187,11 +1183,11 @@ footer h1 {
 	input[type="submit"] {
 		font-size: 0.6rem;
 	}
-    .arrow-icon{
-		display: none ;
+	.arrow-icon {
+		display: none;
 	}
-	footer h1{
-		font-size: .5rem;
+	footer h1 {
+		font-size: 0.5rem;
 		letter-spacing: 1px;
 	}
 }

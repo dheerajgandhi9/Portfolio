@@ -58,7 +58,7 @@ const navSlide = () => {
 // });
 // t5.from(".a3", {y:20, opacity:0, duration:0.5});
 
-// navSlide();
+navSlide();
 
 
 
