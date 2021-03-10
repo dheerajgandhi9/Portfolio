@@ -475,6 +475,9 @@
 					data: $("#senderform").serializeArray(),
 					success: function () {
 						alert("Form Data Submitted :)");
+						document.querySelector("#sendername").value = "";
+						document.querySelector("#senderemail").value = "";
+						document.querySelector("#sendermessage").value = "";
 					},
 					error: function () {
 						alert("There was an error :(");
