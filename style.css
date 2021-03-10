@@ -1009,6 +1009,13 @@ footer h1 {
 	.separator {
 		font-size: 1.3rem;
 	}
+	.line:nth-child(1) {
+		margin-left: -47%;
+	}
+
+	.line:nth-child(2) {
+		margin-left: 47%;
+	}
 	.image1 {
 		height: 70%;
 		width: 70%;
