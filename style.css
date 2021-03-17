@@ -207,7 +207,7 @@ nav ul li:hover {
 	margin-right: 2%;
 }
 .icontxt {
-	font-size: clamp(0.5rem, 0.8vw, 3rem);
+	font-size: clamp(0.8rem, 0.8vw, 3rem);
 }
 
 .sm {
@@ -219,22 +219,22 @@ nav ul li:hover {
 .socialmedia #insta {
 	position: relative;
 	top: 10px;
-	height: clamp(20px, 2vw, 30px);
-	width: clamp(20px, 3vw, 30px);
+	height: clamp(22px, 2vw, 30px);
+	width: clamp(22px, 3vw, 30px);
 }
 .socialmedia #mail {
 	position: relative;
 	left: 2px;
 	top: 14px;
-	height: clamp(20px, 2vw, 30px);
-	width: clamp(20px, 3vw, 30px);
+	height: clamp(22px, 2vw, 30px);
+	width: clamp(22px, 3vw, 30px);
 }
 .socialmedia #linkedin {
 	position: relative;
 	top: 12px;
 	left: 1px;
-	height: clamp(20px, 2vw, 30px);
-	width: clamp(20px, 3vw, 30px);
+	height: clamp(22px, 2vw, 30px);
+	width: clamp(22px, 3vw, 30px);
 }
 .socialmedia a {
 	color: rgba(255, 132, 44, 1);
@@ -1226,5 +1226,32 @@ footer h1 {
 		margin-top: 0.5rem;
 		letter-spacing: 3px;
 		color: white;
+	}
+	.socialmedia {
+		right: 12px;
+	}
+	.socialmedia #insta {
+		position: relative;
+		top: 10px;
+		right: 2px;
+		height: 30px;
+		width: 30px;
+	}
+	.socialmedia #mail {
+		position: relative;
+		left: 2px;
+		top: 14px;
+		height: 32px;
+		width: 32px;
+	}
+	.socialmedia #linkedin {
+		position: relative;
+		top: 12px;
+		left: 1px;
+		height: 32px;
+		width: 32px;
+	}
+	.icontxt {
+		display: none;
 	}
 }
