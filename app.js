@@ -21,9 +21,20 @@ const navSlide = () => {
 	const navLinks = document.querySelectorAll("nav ul li ");
 
 	burger.addEventListener("click", () => {
-		console.log("working");
 		burger.classList.toggle("toggle");
 		nav.classList.toggle("nav-active");
+
+		const tl1 = gsap.timeline({ defaults: { ease: "power1.out" } });
+		tl1.fromTo(
+			"nav ul li",
+			{ opacity: 0, marginLeft: "100px" },
+			{ marginLeft: "0%", opacity: 0.7, duration: 0.5, stagger: 0.2 }
+		);
+	});
+	nav.addEventListener("click", () => {
+		burger.classList.toggle("toggle");
+		nav.classList.toggle("nav-active");
+
 		const tl1 = gsap.timeline({ defaults: { ease: "power1.out" } });
 		tl1.fromTo(
 			"nav ul li",
@@ -60,94 +71,127 @@ const navSlide = () => {
 
 navSlide();
 
-
-
-const boxes0 = gsap.utils.toArray('.scroll-animate0');
-boxes0.forEach(box => {
-  gsap.fromTo(box,  
-    {y:50,opacity:0},{y:0,opacity:1, 
-    scrollTrigger: {
-	  trigger: box,
-	  start:"top bottom",
-	  end:"center center",
-      scrub:1, 		
-	}
-  }
-  )});
-  const boxes1 = gsap.utils.toArray('.scroll-animate1');
-  boxes1.forEach(box => {
-	gsap.fromTo(box,  
-	  {x:-100,opacity:0},{x:0,opacity:1, 
-	  scrollTrigger: {
-		trigger: box,
-		start:"top bottom",
-		end:"center center",
-		scrub:1,	
-	  }
-	}
-	)});
-	const boxes2 = gsap.utils.toArray('.scroll-animate2');
-boxes2.forEach(box => {
-  gsap.fromTo(box,  
-    {x:100,opacity:0},{x:0,opacity:1, 
-    scrollTrigger: {
-	  trigger: box,
-	  start:"top bottom",
-	  end:"center center",
-     scrub:1,
-	}
-  }
-  )});
-  const boxes3 = gsap.utils.toArray('.scroll-animate3');
-  boxes3.forEach(box => {
-	gsap.fromTo(box,  
-	  {x:-50,opacity:0},{x:0,opacity:1,
-	  scrollTrigger: {
-		trigger: box,
-		start:"top bottom",
-		end:"center center",
-	   scrub:1,
-		  },
-	}
-	)});
-	const boxes5= gsap.utils.toArray('.scroll-animate5');
-  boxes5.forEach(box => {
-	gsap.fromTo(box,  
-	  {x:200,opacity:0},{x:0,opacity:1,
-	  scrollTrigger: {
-		trigger: box,
-		start:"top bottom",
-		end:"center center",
-	   scrub:1,
-	  }
-	}
-	)});
-	const boxes6= gsap.utils.toArray('.scroll-animate6');
-	boxes6.forEach(box => {
-	  gsap.fromTo(box,  
-		{x:-200,opacity:0},{x:0,opacity:1,
-		scrollTrigger: {
-		  trigger: box,
-		  start:"top bottom",
-		  end:"center center",
-		 scrub:1,
+const boxes0 = gsap.utils.toArray(".scroll-animate0");
+boxes0.forEach((box) => {
+	gsap.fromTo(
+		box,
+		{ y: 50, opacity: 0 },
+		{
+			y: 0,
+			opacity: 1,
+			scrollTrigger: {
+				trigger: box,
+				start: "top bottom",
+				end: "center center",
+				scrub: 1,
+			},
 		}
-	  }
-	  )});
-	const boxes4 = gsap.utils.toArray('.scroll-animate4');
-	boxes4.forEach(box => {
-	  gsap.fromTo(box,  
-		{x:50,opacity:0},{x:0,opacity:1,
-		scrollTrigger: {
-		  trigger: box,
-		  start:"top bottom",
-		  end:"center center",
-		 scrub:1,
+	);
+});
+const boxes1 = gsap.utils.toArray(".scroll-animate1");
+boxes1.forEach((box) => {
+	gsap.fromTo(
+		box,
+		{ x: -100, opacity: 0 },
+		{
+			x: 0,
+			opacity: 1,
+			scrollTrigger: {
+				trigger: box,
+				start: "top bottom",
+				end: "center center",
+				scrub: 1,
+			},
 		}
-	  }
-	  )});
-  
-//   gsap.fromTo(".skill1",  
+	);
+});
+const boxes2 = gsap.utils.toArray(".scroll-animate2");
+boxes2.forEach((box) => {
+	gsap.fromTo(
+		box,
+		{ x: 100, opacity: 0 },
+		{
+			x: 0,
+			opacity: 1,
+			scrollTrigger: {
+				trigger: box,
+				start: "top bottom",
+				end: "center center",
+				scrub: 1,
+			},
+		}
+	);
+});
+const boxes3 = gsap.utils.toArray(".scroll-animate3");
+boxes3.forEach((box) => {
+	gsap.fromTo(
+		box,
+		{ x: -50, opacity: 0 },
+		{
+			x: 0,
+			opacity: 1,
+			scrollTrigger: {
+				trigger: box,
+				start: "top bottom",
+				end: "center center",
+				scrub: 1,
+			},
+		}
+	);
+});
+const boxes5 = gsap.utils.toArray(".scroll-animate5");
+boxes5.forEach((box) => {
+	gsap.fromTo(
+		box,
+		{ x: 200, opacity: 0 },
+		{
+			x: 0,
+			opacity: 1,
+			scrollTrigger: {
+				trigger: box,
+				start: "top bottom",
+				end: "center center",
+				scrub: 1,
+			},
+		}
+	);
+});
+const boxes6 = gsap.utils.toArray(".scroll-animate6");
+boxes6.forEach((box) => {
+	gsap.fromTo(
+		box,
+		{ x: -200, opacity: 0 },
+		{
+			x: 0,
+			opacity: 1,
+			scrollTrigger: {
+				trigger: box,
+				start: "top bottom",
+				end: "center center",
+				scrub: 1,
+			},
+		}
+	);
+});
+const boxes4 = gsap.utils.toArray(".scroll-animate4");
+boxes4.forEach((box) => {
+	gsap.fromTo(
+		box,
+		{ x: 50, opacity: 0 },
+		{
+			x: 0,
+			opacity: 1,
+			scrollTrigger: {
+				trigger: box,
+				start: "top bottom",
+				end: "center center",
+				scrub: 1,
+			},
+		}
+	);
+});
+
+//   gsap.fromTo(".skill1",
 //     {, ,
 //     scrollTrigger: {
 // 	  trigger:".skill1",
@@ -157,4 +201,3 @@ boxes2.forEach(box => {
 // 	}
 //   }
 //   );
-  
